@@ -7,8 +7,8 @@ WORKDIR /app
 
 COPY . ./
 
-RUN ["bash", "./install.sh"]
+RUN ["go", "build"]
 
 EXPOSE 8080
 
-CMD [ "go", "run", "main.go" ]
+CMD [ "./main" ]
